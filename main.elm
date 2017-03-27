@@ -1,7 +1,7 @@
 import Html exposing (Html, div, input, text)
 import Html.Attributes exposing (..)
 import Html.Events exposing (onInput)
-
+import String
 main =
   Html.beginnerProgram
     { model = model
@@ -15,9 +15,8 @@ type alias Model =
   { content : String
   }
 
-model : Model
-model =
-  Model ""
+-- model : Model
+model = Model ""
 
 -- UPDATE
 
@@ -31,7 +30,6 @@ update msg model =
       { model | content = newContent }
 
 -- VIEW
-
 
 view : Model -> Html Msg
 view model =
